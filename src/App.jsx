@@ -3,12 +3,13 @@ import { Modal } from "react-bootstrap";
 import "./app.scss";
 import meta from "./assets/meta_mask.png";
 import video from "./assets/video.mp4";
+import ReactPlayer from 'react-player' ;
 
 
 const App = () => {
   const [value, setValue] = useState(1);
   const [eth, setEth] = useState(0.088);
-  const [mint, setMint] = useState(0);
+  const [mint, setMint] = useState(793);
   const [width, setWidth] = useState("0");
   const [show, setShow] = useState(false);
   const [isethereum, setisethereum] = useState(false) ;
@@ -112,23 +113,31 @@ const App = () => {
     }
   };
 
-  // useEffect(() => {
-  //   if (mint <= 8887)
-  //     setTimeout(() => {
-  //       setMint(mint + 5);
-  //       let minted = mint + 5;
-  //       setWidth(`${(minted / 8888) * 100}`);
-  //     }, 3000);
-  // }, [mint]);
+  useEffect(() => {
+    if (mint <= 8887)
+      setTimeout(() => {
+        setMint(mint + 1);
+        let minted = mint + 1;
+        setWidth(`${(minted / 8888) * 100}`);
+      }, 3000);
+  }, [mint]);
 
   return (
     <>
       <div className="home-page">
-        <div className="logo">
-        <video autoPlay autostart loop width="250" height="250"  >
-          <source src={video} type="video/mp4"/>
-        </video>
-        </div>
+        {/* <div className="logo"> */}
+        {/* <video autoPlay autostart loop width="250" height="250"  >
+          <source src="https://metamoose.s3.amazonaws.com/video.mp4" type="video/mp4"/>
+        </video> */}
+        <ReactPlayer
+        url='https://metamoose2.s3.amazonaws.com/video.mp4'
+        playing={true}
+        loop={true}
+        muted={true}
+        controls={false}
+        
+      />
+        {/* </div> */}
         <div className="mint-box">
           <h1>
             Metamoose PRESALE IS NOW <span className="outline">LIVE</span>

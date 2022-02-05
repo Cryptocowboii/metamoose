@@ -199,7 +199,7 @@ const App = () => {
           </a>
 
           <a
-            href="https://metamoosenft.com/"
+            href="https://www.metamoose.com/"
             target="_blank"
             rel="noreferrer"
           >

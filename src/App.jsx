@@ -129,14 +129,16 @@ const App = () => {
         {/* <video autoPlay autostart loop width="250" height="250"  >
           <source src="https://metamoose.s3.amazonaws.com/video.mp4" type="video/mp4"/>
         </video> */}
-        <ReactPlayer
-        url='https://metamoose2.s3.amazonaws.com/video.mp4'
-        playing={true}
-        loop={true}
-        muted={true}
-        controls={false}
-        
-      />
+          <ReactPlayer
+            url='https://metamoose2.s3.amazonaws.com/video.mp4'
+            playing={true}
+            loop={true}
+            muted={true}
+            controls={false}
+            width = "20%"
+            height="20%"
+            
+          />
         {/* </div> */}
         <div className="mint-box">
           <h1>
